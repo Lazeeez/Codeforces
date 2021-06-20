@@ -19,6 +19,7 @@ void solve(){
         {
             if (candles[i] != num)
             {
+                cout << candles[i] << endl;
                 k++;
             }
         }
