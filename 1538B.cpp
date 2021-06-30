@@ -36,4 +36,3 @@ int main(){
     while(test_cases--){
         solve();
     }
-}
