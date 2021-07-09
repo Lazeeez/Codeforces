@@ -1,30 +1,22 @@
-#include <stdio.h>
+# include <stdio.h>
 main()
 {
-  char filename[20], ch;
-  FILE *fp, *f;
-  clrscr();
-  printf("\nEnter the name of the file");
-  scanf("%s", filename);
-  fp = fopen(filename, "r");
-  f = fopen("dummy", "w");
-  if (fp == NULL)
-  {
-    printf("\nError in reading");
-    getch();
-    return;
-  }
-  while ((ch = fgetc(fp)) != EOF)
-    fputc(ch, f);
-  fclose(fp);
-  fclose(f);
-  printf("\nEnter the name of the file");
-  scanf("%s", filename);
-  f = fopen(filename, "r");
-
-  while ((ch = fgetc(f)) != EOF)
-    fputc(ch, stdout);
-  fclose(f);
-
-  getch();
+   int a[ ]={11,34,55,66,77,87,89};
+   int l=7, f=0, m, ele, flag=0;
+    printf("Enter the element to be find");
+    scanf("%d",&ele);
+   for(m=(l+f)/2; f!=l ; m=(l+f)/2)
+   {
+      if(ele==a[m])
+          flag=1;
+       break;
+     if(ele>a[m])
+      f=m;
+     if(ele<a[m])
+      l=m;
+    }
+ if (flag==1)
+   printf("Element  find at the pos %d",m);
+ elese
+   printf("Elemen not find in array");
 }
